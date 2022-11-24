@@ -121,7 +121,7 @@ p, .p {
   background-color: #382F26;
 }
 
-#inputForm {
+#inputForm1, #inputForm2 {
   border-radius: 0;
   border: 1px solid #FFFFFF;
   padding: 17px 30px 17px 30px;
