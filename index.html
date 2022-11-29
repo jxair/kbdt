@@ -16,21 +16,24 @@
       <div class="row mb-5" id="WEA">
         <div class="d-flex flex-row justify-content-center">
           <img class="logoimg me-4" src="media/logo.png" alt="...">
-          <h6><span class="align-middle">КБ Дмитрия Тюленева</span></h6>  
+          <h6 class="translate-middle-y bbb">КБ Дмитрия Тюленева</h6>  
         </div>
       </div>
 
       <div class="row-fluid back">
-        <img src="media/1.svg" alt="..." class="background">
+        <img src="media/1.svg" alt="..." class="background" id="BACK1">
+        <img src="media/1_narrow.svg" alt="..." class="background" id="BACK2">
+        <img src="media/1_without.svg" alt="..." id="BACK3">
       </div>
 
-      <div class="row justify-content-between mb-5">
+      <div class="row mb-5">
 
         <div class="col-3 downpos">
             <div class="position-relative top-50 translate-middle-y">
               <h6>последняя работа</h6>
-              <h1 class="py-5"><code>Центр моды<br>и искусств<br>EP YAYING</code></h1>
-              <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#firstPage">Подробнее</button>
+              <h1 id="HEAD"><code>Центр моды<br>и искусств<br>EP YAYING</code></h1>
+              <img src="media/mobile.svg" alt="..." class="background" id="PIC3">
+              <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#firstPage">Подробнее</button>       
             </div>
         </div>
 
@@ -46,23 +49,23 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row row_line">
 
           <h2 class="mb-4 mt-5 ralewayfont2"><code>Наши проекты</code></h2>
 
-          <div class="col">
+          <div class="col mobilecard">
             <img src="media/our1.png" class="img-fluid" alt="...">
             <h4 class="mt-3">Жилой дом Mapu 5</h4>
             <p class="text-secondary mt-1">Уникальный характер тель-авивских ближневосточных и средиземноморских материалов и современныйвизуальный образ.</p>
           </div>
 
-          <div class="col">
+          <div class="col mobilecard">
             <img src="media/our2.png" class="img-fluid" alt="...">
             <h4 class="mt-3">Скейт-парк на Вокзальной улице</h4>
             <p class="text-secondary mt-1">Общественное пространство для развития спортивных мероприятий, семейного общения, общения с природой для 5000+ посетителей.</p>
           </div>
 
-          <div class="col">
+          <div class="col mobilecard">
             <img src="media/our3.png" class="img-fluid" alt="...">
             <h4 class="mt-3">Школа Жана Луи Этьена</h4>
             <p class="text-secondary mt-1">Школьная группа является самым первым элементом нового района в застройке Coupvray.</p>
@@ -74,26 +77,40 @@
 
     <div class="container otstup">
       
-        <div class="row mb-5">
+        <div class="row row_big">
 
-          <div class="col-8"></div>
+          <div class="col-8">
+            <img id="STADI" src="media/stad.png" class="img-fluid" alt="...">
+          </div>
   
           <div class="col-4">
             <div class="stadblock">
               <h6>призер StadiumDB</h6>
               <h2 class="my-4 ralewayfont2"><code>Стадион и парк<br>ФК Краснодар</code></h2>
-              <p class="fs-5 text-secondary mb-4">Стадион, спроектированный в соответствии со стандартами УЕФА, возвышается на цоколе и удобно вписывается в парковый ландшафт.</p>
+              <p class="fs-5 text-secondary mb-4 padri">Стадион, спроектированный в соответствии со стандартами УЕФА, возвышается на цоколе и удобно вписывается в парковый ландшафт.</p>
               <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#secondPage">Подробнее</button>
             </div>
           </div>
   
         </div>
+
+        <div class="row row_small">
+          <img id="STADI" src="media/stad.png" class="img-fluid" alt="...">
+          <div class="stadblock">
+            <div class="brownblock">
+            <h6>призер StadiumDB</h6>
+            <h2 class="my-3 ralewayfont2"><code>Стадион и парк ФК Краснодар</code></h2>
+            <p class="fs-5 text-secondary mb-3 padri">Стадион, спроектированный в соответствии со стандартами УЕФА, возвышается на цоколе и удобно вписывается в парковый ландшафт.</p>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#secondPage">Подробнее</button>
+          </div>
+          </div>
+        </div>
       
     </div>
 
-    <div class="container">
+    <div class="container otstup2">
 
-        <div class="row">
+        <div class="row row_stolb">
 
           <div class="col">
             <div class="brown">
@@ -115,11 +132,14 @@
                   <div class="myrow withoutpadding">
                     <input type="email" class="form-control" id="inputForm2" placeholder="E-mail">
                   </div>
+                  <div class="myrow withoutpadding before768">
+                    <button type="submit" class="btn btn-dark">Отправить</button>
+                  </div>
                 </div>
 
-                <div class="mycol withoutpadding">
+                <div class="mycol withoutpadding after768">
                   <div class="myrow withoutpadding"></div>
-                  <div class="myrow withoutpadding ms-4">
+                  <div class="myrow withoutpadding ms-4 after768">
                     <button type="submit" class="btn btn-dark">Отправить</button>
                   </div>
                 </div>
@@ -202,8 +222,10 @@
             </div>
             
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#secondPage">Следующая работа</button>
+              <button type="button" class="btn-close" id="MICROBUT" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+              <button type="button" id="BIGBUT" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+              <button type="button" id="LITBUT" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+              <button type="button" class="btn btn-dark" id="NEXTBUT" data-bs-toggle="modal" data-bs-target="#secondPage">Следующая работа</button>
             </div>
           </div>
         </div>
@@ -271,8 +293,10 @@
           </div>
           
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#firstPage">Следующая работа</button>
+            <button type="button" class="btn-close" id="MICROBUT" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            <button type="button" id="BIGBUT" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" id="LITBUT" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-dark" id="NEXTBUT" data-bs-toggle="modal" data-bs-target="#firstPage">Следующая работа</button>
           </div>
         </div>
       </div>
