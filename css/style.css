@@ -2,6 +2,10 @@
 
 html { overflow-x: hidden; }
 
+body {
+  overflow-x: hidden;
+}
+
 html::-webkit-scrollbar {
   display: none;
 }
@@ -72,6 +76,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 h1, .h1 {
   font-weight: 600;
+  width: max-content;
 }
 
 h5, .h5 {
@@ -83,9 +88,17 @@ h5, .h5 {
   text-transform: none;
 }
 
+.bbb {
+  position: relative;
+  top: 14px;
+  margin: 0;
+  height: min-content;
+}
+
 h6, .h6 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  width: max-content;
 }
 
 p, .p {
@@ -107,8 +120,80 @@ p, .p {
   position: relative;
 }
 
-.downpos {
-  height: 40vw;
+@media (min-width: 997px) {
+  .downpos {
+    height: 40vw;
+  }
+
+  #BACK2, #BACK3, #PIC3 {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  #HEAD {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 996.98px) {
+  .downpos {
+    height: calc(100px + 50vw);
+  }
+  
+  #BACK1, #BACK3, #PIC3 {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  #HEAD {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media (max-width: 499.98px) {
+  .bbb {
+    font-size: 0.75rem;
+  }
+
+  .downpos {
+    position: relative;
+    top: 50px;
+    margin-bottom: 40px;
+  }
+
+  #BACK1, #BACK2 {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  #HEAD {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #BACK3 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  #PIC3 {
+    width: calc(100vw - 24px);
+    margin-bottom: 1rem;
+  }
+}
+
+#BACK1, #BACK2, #BACK3 {
+  overflow: hidden;
 }
 
 .form-control, .form-control::placeholder, .form-control:focus {
@@ -130,7 +215,18 @@ p, .p {
 .brown {
   background-color: #382F26;
   margin: 0;
-  padding: 60px 60px 60px 65px;
+}
+
+@media (min-width: 500px) {
+  .brown, .brownblock {
+    padding: 60px;
+  }
+}
+
+@media (max-width: 499.98px) {
+  .brown, .brownblock {
+    padding: 30px;
+  }
 }
 
 .mycont {
@@ -158,34 +254,182 @@ p, .p {
   position: relative;
   width: fit-content;
   margin: 0;  
-  background-color: #382F26;
 }
 
-.stadblock::before {
-  position: absolute;
-	content: '';
-	top: -60px;
-	right: -106px;
-	bottom: -68px;
-	left: -440px;  /*ПОСЧИТАТЬ ШИРИНУ КОЛОНКИ + ПАДДИНГ*/
-	pointer-events: none;
-  background-color: #382F26;
-	mix-blend-mode: lighten;
-  z-index: -1000;
-  clip-path: polygon(0 0, 92.5% 0, 100% 100%, 0 100%);
-  overflow: hidden;
+.padri {
+  padding-right: 30px;
 }
 
-.stadblock::after {
-  position: absolute;
-  content: '';
-  background: url("../media/stad.png");
-  background-size: cover;
-  width: 1158px;
-  height: 477px;
-  left: calc(-1158px - 2*(var(--bs-gutter-x) * .5));
-  top: -30px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 7.5% 100%);
+@media (min-width: 1540px) {
+  .stadblock::before {
+    position: absolute;
+    content: '';
+    top: -60px;
+    bottom: -68px;
+    left: -440px;  /*ПОСЧИТАТЬ ШИРИНУ КОЛОНКИ + ПАДДИНГ*/
+    pointer-events: none;
+    background-color: #382F26;
+    mix-blend-mode: lighten;
+    z-index: -1000;
+    overflow: hidden;
+	  right: -106px;
+    clip-path: polygon(0 0, 92.5% 0, 100% 100%, 0 100%);
+  }
+
+  .stadblock::after {
+    position: absolute;
+    content: '';
+    background: url("../media/stad.png");
+    background-size: cover;
+    width: 1158px;
+    height: 477px;
+    left: calc(-1158px - 2*(var(--bs-gutter-x) * .5));
+    top: -30px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 7.5% 100%);
+  }
+
+  #STADI {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .otstup2 {
+    margin-top: 325px;
+  }
+
+  .row_small {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .otstup {
+    margin-top: 210px;
+  }
+}
+
+@media (max-width: 1539.98px) and (min-width: 1215px) {
+  .stadblock::before {
+    position: absolute;
+    content: '';
+    top: -60px;
+    bottom: -68px;
+    left: -300px; 
+    pointer-events: none;
+    background-color: #382F26;
+    mix-blend-mode: lighten;
+    z-index: -1000;
+    overflow: hidden;
+	  right: 0px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  #STADI {
+    position: relative;
+    top: -30px;
+    height: 520px;
+    object-fit: cover;
+  }
+
+  .otstup2 {
+    margin-top: 180px;
+  }
+
+  .row_small {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .otstup {
+    margin-top: 210px;
+  }
+}
+
+@media (max-width: 1214.98px) {
+  .brownblock {
+    background-color: #382F26;
+    width: 100%;
+  }
+
+  .stadblock {
+    width: 100%;
+  }
+
+  .row_big {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .padri {
+    max-width: 496px;
+  }
+
+  #STADI {
+    position: relative;
+    height: calc(200px+40vw);
+    object-fit: cover;
+  }
+
+  .otstup2 {
+    margin-top: 120px;
+  }
+
+  .row_stolb {
+    flex-direction: column;
+  }
+
+  .brown {
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    max-width: 636px;
+  }
+
+  .otstup {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 789.98px) {
+  .row_line {
+    flex-direction: column;
+  }
+
+  .mobilecard {
+    margin-top: 30px;
+  }
+
+  .text-secondary {
+    max-width: 416px;
+  }
+}
+
+@media (min-width: 768px) {
+  .before768 {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767.98px) {
+ .after768 {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+ }
+
+ .before768 {
+  margin-top: 1.5rem !important;
+ }
 }
 
 .ralewayfont {
@@ -196,11 +440,6 @@ p, .p {
 .ralewayfont2 {
   --bs-body-font-family: 'Raleway' !important;
   font-weight: 600;
-}
-
-.otstup {
-  margin-top: 210px;
-  margin-bottom: 325px;
 }
 
 .logoimg {
@@ -220,21 +459,47 @@ p, .p {
   width: 100vw;
 }
 
+@media (min-width: 650px) {
+  #DT {
+    width: 46vw;
+  }
+}
+
+@media (max-width: 649.98px) {
+  #BOTTEXT {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  #DT {
+    width: 19rem;
+  }
+}
+
+@media (max-width: 1219.98px) {
+  #BOTIMG {
+    height: 30rem;
+  }
+}
+
 #BOTIMG {
   width: 100%;
+  object-fit: cover;
 }
 
 #DT {
   z-index: 100;
   position: absolute;
   flex: 0 0 auto;
-  width: 46vw;
   height: auto;
   left: 0;
   bottom: 0;
 }
 
 #BOTTEXT {
+  z-index: 101;
   position: absolute;
   right: 7vw;
   bottom: 3vw;
@@ -259,4 +524,76 @@ a {
 
 a:hover {
   color: #B6AFA9;
+}
+
+@media (min-width: 992px) {
+  #LITBUT {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  #MICROBUT {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 475px) {
+  #BIGBUT {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  #LITBUT {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #FFF;
+    color: #000;
+    margin: 0 12px 0 0;
+  }
+
+  #MICROBUT {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+@media (max-width: 474.98px) {
+  #BIGBUT {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  #LITBUT {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  #NEXTBUT {
+    padding: 18px 18px 18px 18px;
+  }
+}
+
+@media (max-width: 324.98px) {
+  #MICROBUT {
+    margin-left: 0;
+  }
 }
