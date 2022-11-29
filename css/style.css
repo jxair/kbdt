@@ -288,7 +288,7 @@ p, .p {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 7.5% 100%);
   }
 
-  #STADI {
+  .stadi {
     width: 0;
     height: 0;
     opacity: 0;
@@ -327,7 +327,7 @@ p, .p {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
-  #STADI {
+  .stadi {
     position: relative;
     top: -30px;
     height: 520px;
@@ -371,7 +371,7 @@ p, .p {
     max-width: 496px;
   }
 
-  #STADI {
+  .stadi {
     position: relative;
     height: calc(200px+40vw);
     object-fit: cover;
@@ -527,7 +527,7 @@ a:hover {
 }
 
 @media (min-width: 992px) {
-  #LITBUT {
+  .btn_lit {
     width: 0;
     height: 0;
     opacity: 0;
@@ -535,7 +535,7 @@ a:hover {
     padding: 0;
   }
 
-  #MICROBUT {
+  .btn_micro {
     width: 0;
     height: 0;
     opacity: 0;
@@ -545,7 +545,7 @@ a:hover {
 }
 
 @media (max-width: 991.98px) and (min-width: 475px) {
-  #BIGBUT {
+  .btn_big {
     width: 0;
     height: 0;
     opacity: 0;
@@ -553,15 +553,15 @@ a:hover {
     padding: 0;
   }
 
-  #LITBUT {
+  .btn_lit {
     padding-left: 0;
     padding-right: 0;
     background-color: #FFF;
     color: #000;
-    margin: 0 12px 0 0;
+    margin: 0 24px 0 0;
   }
 
-  #MICROBUT {
+  .btn_micro {
     width: 0;
     height: 0;
     opacity: 0;
@@ -571,7 +571,7 @@ a:hover {
 }
 
 @media (max-width: 474.98px) {
-  #BIGBUT {
+  .btn_big {
     width: 0;
     height: 0;
     opacity: 0;
@@ -579,7 +579,7 @@ a:hover {
     padding: 0;
   }
 
-  #LITBUT {
+  .btn_lit {
     width: 0;
     height: 0;
     opacity: 0;
@@ -587,13 +587,13 @@ a:hover {
     padding: 0;
   }
 
-  #NEXTBUT {
+  .btn_next {
     padding: 18px 18px 18px 18px;
   }
 }
 
 @media (max-width: 324.98px) {
-  #MICROBUT {
+  .btn_micro {
     margin-left: 0;
   }
 }
